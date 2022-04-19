@@ -19,6 +19,7 @@ facilities of stdarg) are converted for output.
 Upon successful return, \fB_printf()\fR returns the number of characters 
 printed (excluding the null byte used to end output to strings).
 
+
 If an output error is encountered, -1 is returned.
 .in
 
@@ -35,6 +36,7 @@ order) zero or more \fIflags\fR, an optional minimum \fIfield width\fR, an
 optional \fIprecision\fR and an optional \fIlength\fR modifier. The arguments 
 must correspond with the conversion specifier, and are used in the order given.
 .in
+
 
 .B Flag Characters
 .in +2n
@@ -56,6 +58,7 @@ respectively, is prepended for non-zero numbers.
 signed conversion.
 .in
 .RE
+
 
 .RS
 .B +

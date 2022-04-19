@@ -1,9 +1,13 @@
 #include "main.h"
 
 unsigned char handle_flags(const char *flag, char *index);
+
 unsigned char handle_length(const char *modifier, char *index);
+
 int handle_width(va_list args, const char *modifier, char *index);
+
 int handle_precision(va_list args, const char *modifier, char *index);
+
 unsigned int (*handle_specifiers(const char *specifier))(va_list, buffer_t *,
 		unsigned char, int, int, unsigned char);
 
@@ -15,6 +19,7 @@ unsigned int (*handle_specifiers(const char *specifier))(va_list, buffer_t *,
  * Return: If flag characters are matched - a corresponding value.
  *         Otherwise - 0.
  */
+
 unsigned char handle_flags(const char *flag, char *index)
 {
 	int i, j;
@@ -57,6 +62,7 @@ unsigned char handle_flags(const char *flag, char *index)
  * Return: If a lenth modifier is matched - its corresponding value.
  *         Otherwise - 0.
  */
+
 unsigned char handle_length(const char *modifier, char *index)
 {
 	if (*modifier == 'h')
@@ -83,6 +89,7 @@ unsigned char handle_length(const char *modifier, char *index)
  * Return: If a width modifier is matched - its value.
  *         Otherwise - 0.
  */
+
 int handle_width(va_list args, const char *modifier, char *index)
 {
 	int value = 0;
@@ -118,6 +125,8 @@ int handle_width(va_list args, const char *modifier, char *index)
  *         If the precision modifier is empty, zero, or negative - 0.
  *         Otherwise - -1.
  */
+
+
 int handle_precision(va_list args, const char *modifier, char *index)
 {
 	int value = 0;
@@ -165,6 +174,7 @@ int handle_precision(va_list args, const char *modifier, char *index)
  * Return: If a conversion function is matched - a pointer to the function.
  *         Otherwise - NULL.
  */
+
 unsigned int (*handle_specifiers(const char *specifier))(va_list, buffer_t *,
 		unsigned char, int, int, unsigned char)
 {
