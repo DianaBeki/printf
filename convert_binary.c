@@ -76,8 +76,10 @@ unsigned int convert_percent(va_list args, buffer_t *output,
  * @len: A length modifier.
  * @output: A buffer_t struct containing a character array.
  *
- * Return: The number of bytes stored to the buffer.
+ * Return: The number of bytes stored to the buffer
+ * 
  */
+
 unsigned int convert_p(va_list args, buffer_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len)
 {

@@ -1,5 +1,6 @@
 #include "main.h"
 
+
 unsigned int convert_s(va_list args, buffer_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len);
 unsigned int convert_S(va_list args, buffer_t *output,
@@ -8,6 +9,7 @@ unsigned int convert_r(va_list args, buffer_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len);
 unsigned int convert_R(va_list args, buffer_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len);
+
 
 /**
  * convert_s - Converts an argument to a string and
@@ -21,6 +23,7 @@ unsigned int convert_R(va_list args, buffer_t *output,
  *
  * Return: The number of bytes stored to the buffer.
  */
+
 unsigned int convert_s(va_list args, buffer_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len)
 {
@@ -52,6 +55,7 @@ unsigned int convert_s(va_list args, buffer_t *output,
 
 	return (ret);
 }
+
 
 /**
  * convert_S - Converts an argument to a string and
